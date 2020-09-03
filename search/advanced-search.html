@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google | Advanced Search</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <!--Navbar below-->
+        <nav class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-6 d-flex justify-content-start align-items-center">
+                    <img class="g-nav-logo">
+                </div>
+                <div class="g-navbar col-6 d-flex justify-content-end">
+                    <ul class="list-inline text-right">
+                        <li class="list-inline-item"><a href="index.html">Google Search</a></li>
+                        <li class="list-inline-item"><a href="image-search.html">Image Search</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Header / Logo-->
+        <header class="container-fluid text-left py-4 px-5 g-advanced-header">
+                Advanced Search
+        </header>
+        <hr style="margin: 0px;"/>
+
+        <!--Content Section below-->
+        <section class="container-fluid mt-4 px-5">
+            <h6 style="color: #333;" class="py-1">Find pages with...</h6>
+            <!--Form input and submit button-->
+            <form class="text-center" action="https://google.com/search">
+                <div class="row">
+                    <div class="col-12 col-lg-2 px-0 text-left g-advanced-labels">
+                        all these words:
+                    </div>
+                    <div class="col-12 col-lg-10 text-left g-advanced-inputs">
+                        <input class="g-advanced-text-input" type="text" name="as_q">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-2 px-0 text-left g-advanced-labels">
+                        this exact word or phrase:
+                    </div>
+                    <div class="col-12 col-lg-10 text-left g-advanced-inputs">
+                        <input class="g-advanced-text-input" type="text" name="as_epq">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-2 px-0 text-left g-advanced-labels">
+                        any of these these words:
+                    </div>
+                    <div class="col-12 col-lg-10 text-left g-advanced-inputs">
+                        <input class="g-advanced-text-input" type="text" name="as_oq">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-2 px-0 text-left g-advanced-labels">
+                        none of these words:
+                    </div>
+                    <div class="col-12 col-lg-10 text-left g-advanced-inputs">
+                        <input class="g-advanced-text-input" type="text" name="as_eq">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-2 px-0 text-left g-advanced-labels">
+                    </div>
+                    <div class="col-12 col-lg-10 text-center text-lg-right g-advanced-inputs">
+                        <button type="submit" value="Google Search" class="g-advanced-submit"> Advanced Search </button>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+    </body>
+</html>

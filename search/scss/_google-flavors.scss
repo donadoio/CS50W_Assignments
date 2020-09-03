@@ -1,0 +1,187 @@
+// Variables
+$logo_location: url("img/google-logo.png");
+$g-default-fontfamily: Roboto,HelveticaNeue,Arial,sans-serif;
+$g-default-fontsize: 10px;
+
+//General Body Styling
+body{
+	font-family: $g-default-fontfamily;
+	font-size: $g-default-fontsize;
+}
+input:focus{
+	outline: none;
+}
+
+//Homepage & Image Submit Search button
+.g-main-submit{
+	@extend .btn;
+	margin: 11px 4px;
+	padding: 0px 16px;
+	background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+	background-color: #f2f2f2;
+	border: 1px solid #f2f2f2;
+	border-radius: 4px;
+	color: #5F6368;
+	font-family: arial,sans-serif;
+	font-size: 14px;
+	line-height: 27px;
+	height: 36px;
+	min-width: 54px;
+	text-align: center;
+	cursor: pointer;
+}
+.g-main-submit:hover{
+	background-color: #F3F3F3;
+	border: 1px solid #C6C6C6;
+	color: #000000;
+}
+
+//Advanced Submit Search button
+.g-advanced-submit{
+	@extend .btn;
+	@extend .btn-primary; 
+	@extend .btn-sm;
+	height: 30px;
+	width: 120px;
+	border-radius: 2px;
+	cursor: default;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+	color: white;
+}
+
+
+//Navigation
+.g-nav-logo{
+	content: $logo_location;
+	width: 92px;
+	height: 33px;
+}
+//Navbar Links
+.g-navbar{
+	padding: 0px;
+	margin: 15px 0px;
+	ul{
+		font-family: arial,sans-serif;
+		font-size: 13px;
+		margin-right: 10px;
+		li{
+			a{
+				color: rgba(0, 0, 0, 0.87);
+			}
+			a:hover{
+				text-decoration: underline;
+				color: rgba(0, 0, 0, 0.87);
+			}
+		}
+	}
+}
+
+//Header or Logo Space
+.g-advanced-header{
+	color: #d93025;
+	font-family: arial,sans-serif;
+	font-size: 20px;
+}
+//Small logo
+.g-logo-header-sm{
+	content: $logo_location;
+	width: 160px;
+	height: 56px;
+}
+//Larger logo
+.g-logo-header-lg{
+	content: $logo_location;
+	width: 272px;
+	height: 92px;
+}
+.g-image-search-header-sm{
+	position: relative;
+	display: inline-block;
+	.g-image-search-label-sm{
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		color: #4285f4;
+		font-size: 11px;
+		white-space: nowrap;
+	}
+}
+.g-image-search-header-lg{
+	position: relative;
+	display: inline-block;
+	.g-image-search-label-lg{
+		position: absolute;
+		right: 0px;
+		bottom: -40px;
+		color: #4285f4;
+		font-size: 16px;
+		white-space: nowrap;
+	}
+}
+
+//Home & Image Searchbar Section
+.g-input-container{
+	display: inline-flex;
+	border: 1px solid #dadce0;
+	border-radius: 20px;
+	background: #fff;
+	width: 95%;
+	max-width: 690px;
+	.g-magnify-icon-container{
+		border-radius: 0 20px 20px 0;
+		padding: 0 8px;
+		border: none;
+		margin-right: -1px;
+		padding-right: 0px;
+		flex: 0 0 auto;
+		background: none;
+		color: #9aa0a6;
+		height: 24px;
+		width: 24px;
+		margin: auto;
+		display: inline-block;
+		fill: currentColor;
+		line-height: 24px;
+		position: relative;
+		.g-magnify-icon{
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.g-text-input-container{
+		flex: 1;
+		display: flex;
+		padding: 7px 13px 6px 13px;
+		.g-text-input{
+			border: none;
+			width: 100%;
+			font-size: 16px;
+			color: rgba(0,0,0,.87);
+		}
+		.g-search-input:focus{
+			border: none;
+			outline: none;
+		}
+	}
+}
+
+// Advanced Search Form
+.g-advanced-labels{
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+.g-advanced-inputs{
+	padding: 0px;
+	margin-bottom: 10px;
+	max-width: 700px;
+	.g-advanced-text-input{
+		width: 100%;
+		height: 25px;
+		font: 400 13.3333px Arial;
+	}
+}
