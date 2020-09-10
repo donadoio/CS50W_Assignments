@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-from . import util
+from markdown2 import markdown
 
-from markdown2 import Markdown
+from . import util
 
 
 def index(request):
@@ -11,12 +11,14 @@ def index(request):
     })
 
 def entry(request, entrytitle):
-    entry = util.get_entry(entrytitle)
-    markdowner = Markdown()
-    entry = markdowner.convert(entry)
-    if entry == None:
-        return render(request, "encyclopedia/not_found.html")
-    return render(request, "encyclopedia/entry.html", {
-        "entrytitle": entrytitle,
-        "entry": entry
-    })
+    entrycontent = util.get_entry(entrytitle)
+    if entrycontent == None:
+        return render(request, "encyclopedia/entry-not-found.html", {
+            "entrytitle": entrytitle
+        })
+    else:
+        entrycontent = markdown(entrycontent)
+        return render(request, "encyclopedia/entry.html", {
+            "entrytitle": entrytitle,
+            "entrycontent": entrycontent
+        })
